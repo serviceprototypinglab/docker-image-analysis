@@ -111,8 +111,9 @@ done
 
 s="$s\n}"
 
-echo $s > docker.dot
+echo -e $s > docker.dot
 if [ $hasdot = 0 ]
 then
 	dot -Tpng docker.dot > docker.png
+	dot -Tpdf docker.dot > docker.pdf
 fi
